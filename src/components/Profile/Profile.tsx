@@ -19,7 +19,7 @@ export const Profile = React.memo(function () {
     if (selector.userId != null) {
       dispatch(getUserData(selector.userId));
     }
-  }, [dispatch]);
+  }, [dispatch, selector.userId]);
 
   if (!selector.isAuth) {
     return <Redirect to={"/login"} />;

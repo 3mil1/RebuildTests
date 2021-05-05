@@ -42,7 +42,7 @@ export const registerReducer = (state = initialState, action: SetReg) => {
 };
 
 // eslint-disable-next-line no-redeclare
-const SetReg = (
+const SetRegister = (
   email: string,
   firstName: string,
   lastName: string,
@@ -74,7 +74,7 @@ export const register = (
         .register(email, firstName, lastName, password)
         .then((response) => {
           response.status = 201;
-          dispatch(SetReg(email, firstName, lastName, password));
+          dispatch(SetRegister(email, firstName, lastName, password));
           dispatch(setStatus("succeeded"));
           dispatch(setStatus("confirm"));
         })
