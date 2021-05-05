@@ -23,7 +23,7 @@ export const Tags = React.memo(function () {
       setCategories(initialValues["categories"]);
       setUnusedCategories(initialValues["unusedCategories"]);
     }
-  }, [dispatch]);
+  }, [dispatch, initialValues, tags]);
 
   const onBack = useCallback(() => {
     history.goBack();
@@ -45,7 +45,7 @@ export const Tags = React.memo(function () {
         },
       });
     }
-  }, [history, location, initialValues, categories]);
+  }, [history, location, initialValues, categories, unusedCategories]);
 
   const handleDelete = (chipToDelete: CategoriesType) => () => {
     setCategories((chips) =>

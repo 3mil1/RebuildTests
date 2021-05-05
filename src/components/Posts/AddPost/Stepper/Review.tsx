@@ -26,7 +26,7 @@ export const Review = React.memo(function () {
       )
     );
     setRedirect(true);
-  }, [initialValues]);
+  }, [initialValues, dispatch]);
 
   const onBack = useCallback(() => {
     history.goBack();

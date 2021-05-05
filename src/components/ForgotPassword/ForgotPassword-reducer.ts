@@ -26,8 +26,7 @@ export const resetPwReducer = (state = initialState, action: ResetPw) => {
   }
 };
 
-// eslint-disable-next-line no-redeclare
-const ResetPw = (email: string): ResetPw => {
+const ResetPassword = (email: string): ResetPw => {
   return {
     type: RESET_PASSWORD,
     payload: {
@@ -45,7 +44,7 @@ export const resetPw = (email: string): ThunkType => {
       forgotPasswordApi
         .passwordReset(email)
         .then((response) => {
-          dispatch(ResetPw(email));
+          dispatch(ResetPassword(email));
           dispatch(setStatus("succeeded"));
           if (response.data.message === "Email sent!") {
             dispatch(setStatus("confirm"));
