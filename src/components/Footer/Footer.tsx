@@ -15,16 +15,16 @@ export const Footer = () => {
       <div className={classes.socialLinks}>
         <div>© 2021 ReBuild. All rights reserved</div>
         <div>
-          <a href="">
+          <a href="/#">
             <img src={instagramSvg} alt="instagramSvg" />
           </a>
-          <a href="">
+          <a href="/#">
             <img src={instagramSvg} alt="instagramSvg" />
           </a>
-          <a href="">
+          <a href="/#">
             <img src={instagramSvg} alt="instagramSvg" />
           </a>
-          <a href="">
+          <a href="/#">
             <img src={instagramSvg} alt="instagramSvg" />
           </a>
         </div>
