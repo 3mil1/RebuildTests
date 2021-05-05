@@ -2,7 +2,7 @@
 
 import { STEPPER_FORM_DATA_KEY } from "./clearFormData";
 
-export default () => {
+export default function getKey() {
   const rawFormData = sessionStorage.getItem(STEPPER_FORM_DATA_KEY);
 
   if (!rawFormData) {
@@ -10,4 +10,4 @@ export default () => {
   }
 
   return JSON.parse(rawFormData);
-};
+}
