@@ -1,8 +1,8 @@
 import axios from "axios";
 
 const instance = axios.create({
-  // baseURL: `http://localhost:3000/`,
-  // withCredentials: true,
+  baseURL: `http://135.181.151.30/`,
+  withCredentials: true,
 });
 
 export const authAPI = {
