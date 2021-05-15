@@ -10,7 +10,7 @@ import { makeStyles, createStyles, Theme } from "@material-ui/core/styles";
 import { useDispatch, useSelector } from "react-redux";
 import PersonIcon from "@material-ui/icons/Person";
 import { NavLink } from "react-router-dom";
-import { logout } from "../../../redux/auth-reducer";
+import { logout } from "../../../store/redux/auth-reducer";
 
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
