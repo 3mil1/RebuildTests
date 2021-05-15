@@ -1,12 +1,11 @@
 import { Dispatch } from "redux";
-import { authAPI } from "../api/api";
+import { authAPI } from "../../api/api";
 import { ThunkAction } from "redux-thunk";
-import { setError, setStatus } from "../app/app-reducer";
+import { setError, setStatus } from "../../app/app-reducer";
 
-// eslint-disable-next-line @typescript-eslint/no-use-before-define
 type ActionsType = SetUserData;
 
-const SET_USER_DATA = "SET_USER_DATA";
+export const SET_USER_DATA = "SET_USER_DATA";
 
 type SetUserData = {
   type: typeof SET_USER_DATA;

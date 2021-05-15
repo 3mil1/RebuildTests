@@ -1,11 +1,11 @@
 import { applyMiddleware, combineReducers, createStore } from "redux";
 import thunkMiddleWare from "redux-thunk";
 import { authReducer } from "./auth-reducer";
-import { appReducer } from "../app/app-reducer";
-import { getPostsReducer } from "../components/Posts/GetPosts-reducer";
-import { getCertainPostReducer } from "../components/CertainPostPage/CertainPost-Reducer";
-import { getUserReducer } from "../components/Profile/Profile-reducer";
-import { addPostReducer } from "../components/Posts/AddPost/Stepper/AddPost-reducer";
+import { appReducer } from "../../app/app-reducer";
+import { getPostsReducer } from "../../components/Posts/GetPosts-reducer";
+import { getCertainPostReducer } from "../../components/CertainPostPage/CertainPost-Reducer";
+import { getUserReducer } from "../../components/Profile/Profile-reducer";
+import { addPostReducer } from "../../components/Posts/AddPost/Stepper/AddPost-reducer";
 
 const reducers = combineReducers({
   app: appReducer,

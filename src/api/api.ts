@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const instance = axios.create({
-  baseURL: `http://135.181.151.30/`,
+  baseURL: `http://localhost:3000`,
   withCredentials: true,
 });
 
@@ -55,7 +55,7 @@ export const postsApi = {
     content: string,
     categories: { id: number }[]
   ) {
-    return instance.patch("posts/edit/" + id, { title, content, categories });
+    return instance.patch("/posts/edit/" + id, { title, content, categories });
   },
   commentPost(id: number, rating: number, review_text: string) {
     return instance.post(`/posts/${id}/add-review`, { rating, review_text });

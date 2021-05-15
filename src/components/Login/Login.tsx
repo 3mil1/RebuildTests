@@ -12,14 +12,14 @@ import LockOutlinedIcon from "@material-ui/icons/LockOutlined";
 import InputAdornment from "@material-ui/core/InputAdornment";
 import IconButton from "@material-ui/core/IconButton";
 import { Visibility, VisibilityOff } from "@material-ui/icons";
-import { login } from "../../redux/auth-reducer";
-import { useDispatch, useSelector } from "react-redux";
-import { Redirect, Link as LinkRRD } from "react-router-dom";
+import { login } from "../../store/redux/auth-reducer";
+import { useDispatch } from "react-redux";
+import { Link as LinkRRD } from "react-router-dom";
 import { ForgotPassword } from "../ForgotPassword/ForgotPassword";
 import Link from "@material-ui/core/Link";
 
 export const Login = React.memo(function () {
-  const selector = useSelector((state: any) => state);
+  // const selector = useSelector((state: any) => state);
   const dispatch = useDispatch();
 
   const { handleSubmit, errors: fieldsErrors, control } = useForm();
@@ -30,9 +30,9 @@ export const Login = React.memo(function () {
     dispatch(login(formData.email, formData.password));
   };
 
-  if (selector.auth.isAuth) {
-    return <Redirect to={"/profile"} />;
-  }
+  // if (selector.auth.isAuth) {
+  //   return <Redirect to={"/profile"} />;
+  // }
 
   return (
     <Container component="main" maxWidth="xs">
@@ -62,6 +62,7 @@ export const Login = React.memo(function () {
                   name="email"
                   fullWidth
                   autoFocus
+                  // style={{ pointerEvents: "auto" }}
                 />
               }
               control={control}

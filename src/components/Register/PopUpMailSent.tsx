@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { AppRootStateType } from "../../redux/store";
+import { AppRootStateType } from "../../store/redux/store";
 import { useHistory } from "react-router-dom";
 import { setStatus } from "../../app/app-reducer";
 import Dialog from "@material-ui/core/Dialog";
